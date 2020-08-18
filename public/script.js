@@ -58,6 +58,8 @@ function addVideoStream (video, stream){
 let msg = document.getElementById('chat_message')
 msg.onkeypress = sendMessage
 
+let chatWindow = document.querySelector('.messages')
+
 function sendMessage(e){
   if (e.which == 13 && msg.value.length !== 0) {
     socket.emit('message', msg.value);
@@ -65,3 +67,9 @@ function sendMessage(e){
   }
 
 }
+
+socket.on("createMessage", message => {
+  console.log('in here', message)
+  chatWindow.insertAdjacentHTML( "beforeend",`<li class="message"><b>user</b><br/>${message}</li>`);
+  // scrollToBottom()
+})
