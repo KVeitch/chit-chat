@@ -82,11 +82,19 @@ const toggleMute = () => {
   const enabled = myVideoStream.getAudioTracks()[0].enabled;
   if (enabled) {
     myVideoStream.getAudioTracks()[0].enabled = false;
-    setUnmuteButton();
+    // setUnmuteButton();
+    toggleMuteBtn(!enabled)
   } else {
-    setMuteButton();
+    toggleMuteBtn(!enabled)
+    // setMuteButton();
     myVideoStream.getAudioTracks()[0].enabled = true;
   }
+}
+
+const toggleMuteBtn = (isMuted) => {
+  let html = isMuted ?`<i class="fas fa-microphone"></i><span>Mute</span>`:
+  `<i class="unmute fas fa-microphone-slash"></i><span>Unmute</span>`
+  document.querySelector('.main__mute_button').innerHTML = html;
 }
 
 const setMuteButton = () => {
