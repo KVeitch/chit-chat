@@ -36,7 +36,7 @@ peer.on('open', id =>{
 })
 
 
-function connectToNewUser(userId, stream){
+const connectToNewUser = (userId, stream) => {
   const call = peer.call(userId, stream);
   const video = document.createElement('video');
   call.on('stream', userVideoStream => {
@@ -44,7 +44,7 @@ function connectToNewUser(userId, stream){
   })
 };
 
-function addVideoStream (video, stream){
+const addVideoStream = (video, stream) => {
   video.srcObject = stream;
   video.addEventListener("loadedmetadata", () => {
     video.play();
@@ -69,7 +69,11 @@ function sendMessage(e){
 }
 
 socket.on("createMessage", message => {
-  console.log('in here', message)
-  chatWindow.insertAdjacentHTML( "beforeend",`<li class="message"><b>user</b><br/>${message}</li>`);
-  // scrollToBottom()
+  chatWindow.insertAdjacentHTML( "beforeend",`<li class="message"><b>Name</b> : ${message}</li>`);
+  scrollToBottomOfChat()
 })
+
+const scrollToBottomOfChat = () => {
+  let chatWindow = document.getElementById('main__chat_window')
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
