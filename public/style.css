@@ -58,7 +58,7 @@ body {
 }
 
 .main__controls__button:hover > .leave-meeting {
-  color:red;
+  color: red;
 }
 
 .main__right {
@@ -87,7 +87,6 @@ body {
 .main__message_container {
   padding: 22px 12px;
   display: flex;
-
 }
 
 .main__message_container input {
@@ -95,10 +94,9 @@ body {
   background-color: transparent;
   border: none;
   color: #f5f5f5;
-  padding-left:5px;
-  height:2em;
+  padding-left: 5px;
+  height: 2em;
   line-height: 2em;
-
 }
 
 .leave_meeting {
