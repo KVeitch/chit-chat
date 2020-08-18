@@ -56,9 +56,9 @@ function addVideoStream (video, stream){
 //Messaging section of App
 
 let msg = document.getElementById('chat_message')
-msg.onkeypress = handleKeyPress
+msg.onkeypress = sendMessage
 
-function handleKeyPress(e){
+function sendMessage(e){
   if (e.which == 13 && msg.value.length !== 0) {
     socket.emit('message', msg.value);
     msg.value= ''
