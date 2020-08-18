@@ -20,8 +20,8 @@ background-color:rgb(57, 57, 78);
 .main__videos{
   flex-grow: 1;
   display:flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding:35px;
 }
 
@@ -37,22 +37,31 @@ background-color:rgb(57, 57, 78);
 }
 
 .main__controls__button {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 8px 10px;
+  justify-content: center;
   min-width: 80px;
-  cursor: pointer;
+  padding: 8px;
 }
 
-.main__controls__button:hover {
+.main__controls__button:hover{
   background-color: rgb(57,57,78);
   border-radius: 5px;
 }
 .main__controls__button i {
   font-size: 24px;
 }
+
+.leave-meeting {
+  color:rgb(148, 46, 46);
+}
+
+.main__controls__button:hover > .leave-meeting{
+  color:red;
+}
+
 
 .main__right {
   flex-grow: .15;
