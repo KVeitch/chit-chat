@@ -58,7 +58,7 @@ body {
 }
 
 .main__controls__button:hover > .leave-meeting {
-  color: red;
+  color:red;
 }
 
 .main__right {
@@ -102,12 +102,12 @@ body {
 }
 
 .leave_meeting {
-  color: #eb534b;
+  color: #ad2a24;
 }
 
 .unmute,
 .stop {
-  color: #cc3b33;
+  color: #ad2a24;
 }
 
 #video-grid {
