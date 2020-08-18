@@ -51,3 +51,17 @@ function addVideoStream (video, stream){
   });
   videoGrid.append(video);
 };
+
+
+//Messaging section of App
+
+let msg = document.getElementById('chat_message')
+msg.onkeypress = handleKeyPress
+
+function handleKeyPress(e){
+  if (e.which == 13 && msg.value.length !== 0) {
+    socket.emit('message', msg.value);
+    msg.value= ''
+  }
+
+}
