@@ -5,7 +5,7 @@
 Keeping in touch with loved ones and colleagues easier than ever. Whether you want to catch up with an old friend or you need to attend a work meeting from home, there is Chit Chat, a simple web video conferencing app with included text chat.  
 
 ### The Stack
-NodeJS  
+Node.js  
 [express](https://www.npmjs.com/package/express)  
 [nodemon](https://www.npmjs.com/package/nodemon)  
 [ejs](https://ejs.co/)    
